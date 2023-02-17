@@ -105,3 +105,11 @@ a {
     color-scheme: dark;
   }
 }
+
+.MuiMobileStepper-root 	.MuiMobileStepper-progress {
+  background-color: red !important;
+}
+
+.MuiLinearProgress-determinate{
+  background-color: green !important;
+}
