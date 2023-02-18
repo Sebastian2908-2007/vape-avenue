@@ -161,6 +161,115 @@ const images = [
       '/voopoo-mods (10).png',
   },
 ];
+
+const juiceImgs = [
+  {
+    label: 'Daze Brand',
+    imgPath:
+      '/daze (1).png',
+  },
+  {   
+    label: 'Daze Brand',
+    imgPath:
+      '/daze (2).png',
+  },
+  { 
+    label: 'Daze Brand',
+    imgPath:
+      '/daze (3).png',
+  },
+  { 
+    label: 'Frutia Brand',
+    imgPath:
+      '/frutia (1).png',
+  },
+  { 
+    label: 'Frutia Brand',
+    imgPath:
+      '/frutia (2).png',
+  },
+  { 
+    label: 'Frutia Brand',
+    imgPath:
+      '/frutia (3).png',
+  },
+  { 
+    label: 'Juss Brand',
+    imgPath:
+      '/juss (1).png',
+  },
+  { 
+    label: 'Juss Brand',
+    imgPath:
+      '/juss (2).png',
+  },
+  { 
+    label: 'Juss Brand',
+    imgPath:
+      '/juss (3).png',
+  },
+  { 
+    label: 'Juss Brand',
+    imgPath:
+      '/juss (4).png',
+  },
+  { 
+    label: 'Juss Brand',
+    imgPath:
+      '/juss (5).png',
+  },
+  { 
+    label: 'Mighty Brand',
+    imgPath:
+      '/mighty (1).png',
+  },
+  { 
+    label: 'Mighty Brand',
+    imgPath:
+      '/mighty (2).png',
+  },
+  { 
+    label: 'Mighty Brand',
+    imgPath:
+      '/mighty (3).png',
+  },
+  { 
+    label: 'Mighty Brand',
+    imgPath:
+      '/mighty (4).png',
+  },
+  { 
+    label: 'Milk Brand',
+    imgPath:
+      '/milk.png',
+  },
+  { 
+    label: 'Reds Brand',
+    imgPath:
+      '/reds.png',
+  },
+  { 
+    label: 'Ruthless Brand',
+    imgPath:
+      '/ruthless.png',
+  },
+  { 
+    label: 'Twist Brand',
+    imgPath:
+      '/twist.png',
+  },
+  { 
+    label: 'SadBoy Brand',
+    imgPath:
+      '/sadboy (1).png',
+  },
+  { 
+    label: 'SadBoy Brand',
+    imgPath:
+      '/sadboy (2).png',
+  },
+  
+];
 export default function Home() {
   return (
     <>
@@ -181,7 +290,7 @@ export default function Home() {
        <Grid item xs={12} sm={6} md={4} lg={3} xl={4}>    
          <section className={styles.productSection}>
         <h1 className={styles.productSecH1}>Juice</h1>
-         <Carousel images={images}/>
+         <Carousel images={juiceImgs}/>
         </section>
       </Grid>
        <Grid item xs={12} sm={6} md={4} lg={3} xl={4}>    
