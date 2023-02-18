@@ -464,6 +464,117 @@ const disposableImg =[
       '/xbox.png',
   },
 ];
+
+const accessoryImg = [
+  { 
+    _id:1,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (1).png',
+  },
+  { 
+    _id:2,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (2).png',
+  },
+  { 
+    _id:3,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (3).png',
+  },
+  { 
+    _id:4,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (4).png',
+  },
+  { 
+    _id:5,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (5).png',
+  },
+  { 
+    _id:6,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (6).png',
+  },
+  { 
+    _id:7,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (7).png',
+  },
+  { 
+    _id:8,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (8).png',
+  },
+  { 
+    _id:9,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (9).png',
+  },
+  { 
+    _id:10,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (10).png',
+  },
+  { 
+    _id:11,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (11).png',
+  },
+  { 
+    _id:12,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (12).png',
+  },
+  { 
+    _id:13,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (13).png',
+  },
+  { 
+    _id:14,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (14).png',
+  },
+  { 
+    _id:15,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (15).png',
+  },
+  { 
+    _id:16,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (16).png',
+  },
+  { 
+    _id:17,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (17).png',
+  },
+  { 
+    _id:18,
+    label: 'Accessories',
+    imgPath:
+      '/accessories (18).png',
+  },
+];
 export default function Home() {
   return (
     <>
@@ -496,7 +607,7 @@ export default function Home() {
        <Grid item xs={12} sm={6} md={4} lg={3} xl={4}>    
          <section className={styles.productSection}>
         <h1 className={styles.productSecH1}>Accessories</h1>
-         <Carousel images={images}/>
+         <Carousel images={accessoryImg}/>
         </section>
       </Grid>
      </Grid>
