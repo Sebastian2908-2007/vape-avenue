@@ -61,7 +61,7 @@ function Carousel({images}) {
         enableMouseEvents
       >
         {images.map((step, index) => (
-          <div className={styles.imgDiv} key={step.label}>
+          <div className={styles.imgDiv} key={step._id}>
             {Math.abs(activeStep - index) <= 2 ? (
              <Image
              src={step.imgPath}
