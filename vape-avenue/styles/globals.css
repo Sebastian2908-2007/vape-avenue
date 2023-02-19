@@ -114,3 +114,7 @@ a {
 .MuiLinearProgress-determinate{
   background-color: green !important;
 }
+.MuiPaper-root{
+  background-color: rgb(0,0,0);
+}
+/*214, 219, 220*/

@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import styles from '@/styles/Home.module.css';
 const HeroSection = dynamic(() =>import( '@/components/HeroSection'),{ssr: false});
 /**DRAWER STUFF */
+import logo from '../public/logo.png';
 import { useStoreContext } from '@/utils/GlobalState';
 import { TOGGLE_DRAWER } from '@/utils/actions';
 import { styled, useTheme } from "@mui/material/styles";
@@ -15,7 +16,6 @@ import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
@@ -24,6 +24,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import InfoIcon from '@mui/icons-material/Info';
 
 const drawerWidth = 240;
 
@@ -33,7 +34,8 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 1),
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
-  justifyContent: "flex-start"
+  justifyContent: "flex-start",
+ 
 }));
 /**DRAWER STUFF */
 
@@ -96,7 +98,7 @@ export default function Home() {
      </Grid>
     </Box>
      {/*drawer code***********************************************************************/}
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex",backgroundColor:'rgb(214, 219, 220)' }}>
      
 
       <Drawer
@@ -105,7 +107,7 @@ export default function Home() {
           flexShrink: 0,
           "& .MuiDrawer-paper": {
             width: drawerWidth
-          }
+          },
         }}
         variant="persistent"
         anchor="right"
@@ -116,36 +118,56 @@ export default function Home() {
             {theme.direction === "rtl" ? (
               <ChevronLeftIcon />
             ) : (
-              <ChevronRightIcon />
+              <ChevronRightIcon sx={{color:'#5FAEBF'}}/>
             )}
           </IconButton>
         </DrawerHeader>
-        <Divider />
+        <Divider/>
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+          {["About us","Contact Us"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index % 2 === 0 ? <InfoIcon sx={{color:'#5FAEBF'}}/> : <MailIcon sx={{color:'#5FAEBF'}}/>}
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText sx={{color:'#5FAEBF'}} primary={text} />
               </ListItemButton>
             </ListItem>
           ))}
         </List>
-        <Divider />
-        <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+      
+          <img
+          className={styles.regImg}
+           src='/logo.png'
+           alt='vape avenue logo'
+          width='100%'
+          />
+          <div className={styles.brandDiv}>
+          <img
+          className={styles.regImg}
+           src='/frutia-brand.png'
+           alt='vape avenue logo'
+          width='100%'
+          />
+          <img
+          className={styles.regImg}
+           src='/ruthless-brand.png'
+           alt='vape avenue logo'
+          width='100%'
+          />
+          <img
+          className={styles.regImg}
+           src='/twist-brand.png'
+           alt='vape avenue logo'
+          width='100%'
+          />
+          <img
+          className={styles.regImg}
+           src='/milk-brand.png'
+           alt='vape avenue logo'
+          width='100%'
+          />
+       </div>
       </Drawer>
     </Box>
     </>

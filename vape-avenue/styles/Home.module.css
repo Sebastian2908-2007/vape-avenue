@@ -99,6 +99,18 @@ width: 100%;
   margin-bottom: 3%;
   text-shadow:  0 0 11px #5FAEBF;
 }
+
+.brandDiv{
+  width: 50%;
+ display:flex;
+ flex-direction:column;
+ justify-content:space-between;
+ margin-left: 25%;
+ padding: 3%;
+}
+.regImg{
+  margin-top: 10%
+}
 /*react player stuff*/
 .playerWrapper {
   position: relative;
