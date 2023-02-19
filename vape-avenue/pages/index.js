@@ -7,11 +7,54 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import styles from '@/styles/Home.module.css';
 const HeroSection = dynamic(() =>import( '@/components/HeroSection'),{ssr: false});
+/**DRAWER STUFF */
+import { useStoreContext } from '@/utils/GlobalState';
+import { TOGGLE_DRAWER } from '@/utils/actions';
+import { styled, useTheme } from "@mui/material/styles";
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import MailIcon from "@mui/icons-material/Mail";
+
+const drawerWidth = 240;
+
+const DrawerHeader = styled("div")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  padding: theme.spacing(0, 1),
+  // necessary for content to be below app bar
+  ...theme.mixins.toolbar,
+  justifyContent: "flex-start"
+}));
+/**DRAWER STUFF */
 
 
-
+const boxStyle = {
+  padding:{xs:'1rem',md:'3%'},
+  width:{md:'100%'}
+};
 
 export default function Home() {
+  /**DRAWER STUFF */
+  const theme = useTheme();
+  //const [open, setOpen] = React.useState(false);
+  const [state,dispatch] = useStoreContext();
+
+
+
+  const handleDrawerClose = () => {
+    dispatch({type:TOGGLE_DRAWER});
+  };
+  /**DRAWER STUFF */
   return (
     <>
      <Head>
@@ -20,34 +63,90 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head> 
-    <Box >
-      <HeroSection/>   
+
+    
+
+      <HeroSection/>
+    <Box sx={boxStyle}>   
       <Grid container rowSpacing={{ xs: 3, sm: 2, md: 3 }} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-       <Grid item xs={12} sm={6} md={4} lg={3} xl={4}> 
+       <Grid item xs={12} sm={6} lg={3} > 
        <section className={styles.productSection}>
         <h1 className={styles.productSecH1}>Mods</h1>
          <Carousel images={images}/>
         </section>   
       </Grid>
-       <Grid item xs={12} sm={6} md={4} lg={3} xl={4}>    
+       <Grid item xs={12} sm={6}  lg={3}>    
          <section className={styles.productSection}>
         <h1 className={styles.productSecH1}>Juice</h1>
          <Carousel images={juiceImgs}/>
         </section>
       </Grid>
-       <Grid item xs={12} sm={6} md={4} lg={3} xl={4}>    
+       <Grid item xs={12} sm={6}  lg={3}>    
          <section className={styles.productSection}>
         <h1 className={styles.productSecH1}>Disposable</h1>
          <Carousel images={disposableImg}/>
         </section>
       </Grid>
-       <Grid item xs={12} sm={6} md={4} lg={3} xl={4}>    
+       <Grid item xs={12} sm={6} lg={3}>    
          <section className={styles.productSection}>
         <h1 className={styles.productSecH1}>Accessories</h1>
          <Carousel images={accessoryImg}/>
         </section>
       </Grid>
      </Grid>
+    </Box>
+     {/*drawer code***********************************************************************/}
+    <Box sx={{ display: "flex" }}>
+     
+
+      <Drawer
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          "& .MuiDrawer-paper": {
+            width: drawerWidth
+          }
+        }}
+        variant="persistent"
+        anchor="right"
+        open={state.drawerOpen}
+      >
+        <DrawerHeader>
+          <IconButton onClick={handleDrawerClose}>
+            {theme.direction === "rtl" ? (
+              <ChevronLeftIcon />
+            ) : (
+              <ChevronRightIcon />
+            )}
+          </IconButton>
+        </DrawerHeader>
+        <Divider />
+        <List>
+          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+        <Divider />
+        <List>
+          {["All mail", "Trash", "Spam"].map((text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
     </Box>
     </>
   )
