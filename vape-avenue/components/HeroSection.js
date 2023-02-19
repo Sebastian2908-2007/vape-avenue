@@ -1,13 +1,13 @@
 import styles from '@/styles/Home.module.css';
 import ReactPlayer from 'react-player';
-import heroVideo from '../public/herovideo.mp4';
-const HeroSection = () => {
+//import heroVideo from '../public/herovideo.mp4';
+const HeroSection = ({video}) => {
     return(
         <section className={styles.heroSection}>
             <div className={styles.playerWrapper}>
             <ReactPlayer
             className={styles.reactPlayer}
-            url={heroVideo}
+            url={video}
             playing={true}
             loop={true}
             volume={0}
