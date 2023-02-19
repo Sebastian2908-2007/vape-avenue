@@ -10,7 +10,7 @@ const About = () => {
         <HeroSection video={heroVid}/>
         <section className={styles.aboutOuterSec}>
         <section className={styles.aboutSection}>
-            <div className={styles.aboutImgDiv}>
+            <div className={styles.aboutImgDiv1}>
        <img className={styles.nextImg} src='/Va-about-900.png' alt='vape avenue branding'/>
        </div>
             <p className={styles.aboutParagraph}>

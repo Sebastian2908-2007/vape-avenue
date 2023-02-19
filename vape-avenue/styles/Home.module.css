@@ -21,6 +21,11 @@
   color: #FAF9F6;
   text-shadow: 0 0 8px #5FAEBF;
 }
+@media screen and (min-width: 768px) {
+  .aboutParagraph{
+    text-shadow: 0 0 20px rgb(0,0,0);
+  }
+}
 @media screen and (min-width:1024px) {
   .header{
     padding:1%
@@ -34,20 +39,32 @@
 
 .imgDiv{
   width: 100%;
-  height: 20vh;
+  height: 70vh;
   position: relative;
 }
 .nextImg{
   width:100%;
  height:100%;
 }
-.aboutImgDiv{
+.aboutImgDiv1{
   display:flex;
   flex-direction:row;
   justify-content:center;
   align-items:center;
   width:100%;
 }
+
+@media screen and (min-width:540px) {
+  .aboutImgDiv1{
+    width: 50%;
+  }
+}
+@media screen and (min-width:1024px) {
+  .aboutImgDiv1{
+    width: 30%;
+  }
+}
+
 @media screen and (min-width:375px) {
   .imgDiv{
     height:60vh
@@ -112,9 +129,22 @@ width: 100%;
   box-shadow: 0 0 8px #5FAEBF;
   height:auto;
 }
+@media screen and (min-width:1024px){
+  .aboutSection{
+    width:80%;
+  }
+}
 .aboutOuterSec{
   padding: 1rem;
   height:auto;
+}
+@media screen and (min-width:1024px){
+  .aboutOuterSec{
+    display:flex;
+    flex-direction:column;
+    
+    align-items:center;
+  }
 }
 
 .productSection{
@@ -159,6 +189,7 @@ width: 100%;
   margin-bottom:1rem;
   align-items:center;
   margin-top: 2rem;
+  width:100%;
 
 }
 .aboutImgDiv{
@@ -167,7 +198,5 @@ width: 100%;
   display:flex;
   flex-direction:row;
   justify-content:center;
- 
-  
 }
 /*rgb(0, 119, 255) #1976d2 */
