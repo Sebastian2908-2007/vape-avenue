@@ -6,6 +6,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { TOGGLE_DRAWER } from '@/utils/actions';
 import { useStoreContext } from '@/utils/GlobalState';
 import Head from 'next/head';
+import {ImFacebook} from 'react-icons/im';
+import {FaTiktok} from 'react-icons/fa';
+import {FiTwitter,FiInstagram} from 'react-icons/fi';
 /**DRAWER */
 import Box from '@mui/material/Box';
 import { styled, useTheme } from "@mui/material/styles";
@@ -80,10 +83,17 @@ const Layout = ({children}) => {
         <main className={styles.main}>
           {children}
         </main>
-        <footer className={styles.footer}>footer</footer>
-        <Box sx={{ display: "flex",backgroundColor:'rgb(214, 219, 220)' }}>
-     
+        <footer className={styles.footer}>
+          <span className={styles.footerSpan}>&copy; Vape Avenue {new Date().getFullYear()}</span>
+          <div className={styles.socialsDiv}>
+            <a href='https://www.facebook.com/topdev11' target='_blank'  rel="noopener noreferrer"><ImFacebook/></a>
+            <a href='https://www.instagram.com/topdev.tech/' target='_blank'  rel="noopener noreferrer"><FiInstagram/></a>
+            <a href='https://twitter.com/topdev_tech' target='_blank'  rel="noopener noreferrer"><FiTwitter/></a>
+            <a href='https://www.tiktok.com/@topdev.tech' target='_blank'  rel="noopener noreferrer"><FaTiktok/></a>
+          </div>
+        </footer>
 
+   <Box sx={{ display: "flex",backgroundColor:'rgb(214, 219, 220)' }}>
      <Drawer
        sx={{
          width: drawerWidth,

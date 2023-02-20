@@ -20,10 +20,16 @@
   padding:2%;
   color: #FAF9F6;
   text-shadow: 0 0 8px #5FAEBF;
+  font-family:Copperplate Gothic;
 }
 @media screen and (min-width: 768px) {
   .aboutParagraph{
     text-shadow: 0 0 20px rgb(0,0,0);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .aboutParagraph{
+    font-size: 1.4em
   }
 }
 @media screen and (min-width:1024px) {
@@ -33,8 +39,23 @@
 }
 .footer{
   background-color:rgba(0,0,0,.7);
-  /*background-color: rgb(214, 219, 220);*/
   padding: 2%;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+}
+.footerSpan{
+  color:white;
+  text-shadow:0 0 11px #5FAEBF;
+  font-family:Copperplate Gothic;
+}
+.socialsDiv{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  color:white;
+  text-shadow:0 0 11px #5FAEBF;
+  width:30%;
 }
 
 .imgDiv{
@@ -48,7 +69,7 @@
 }
 .aboutImgDiv1{
   display:flex;
-  flex-direction:row;
+  flex-direction:column;
   justify-content:center;
   align-items:center;
   width:100%;
@@ -57,11 +78,12 @@
 @media screen and (min-width:540px) {
   .aboutImgDiv1{
     width: 50%;
+    flex-direction:row;
   }
 }
 @media screen and (min-width:1024px) {
   .aboutImgDiv1{
-    width: 30%;
+    width: 50%;
   }
 }
 
@@ -126,12 +148,12 @@ width: 100%;
   align-items:center;
   padding: 4%;
   padding-bottom:auto;
-  box-shadow: 0 0 8px #5FAEBF;
+  box-shadow: 0 0 15px #5FAEBF;
   height:auto;
 }
 @media screen and (min-width:1024px){
   .aboutSection{
-    width:80%;
+    width:95%;
   }
 }
 .aboutOuterSec{
@@ -142,7 +164,7 @@ width: 100%;
   .aboutOuterSec{
     display:flex;
     flex-direction:column;
-    
+    padding: 3rem;
     align-items:center;
   }
 }
@@ -159,7 +181,25 @@ width: 100%;
   margin-bottom: 3%;
   text-shadow:  0 0 11px #5FAEBF;
 }
-
+.aboutSecH1{
+  font-size: 2em;
+  text-align: center;
+  margin-top: 3%;
+  text-shadow:  0 0 20px #5FAEBF;
+  color: white;
+  font-family:Copperplate Gothic;
+}
+@media screen and (min-width:768px){
+  .aboutSecH1{
+    font-size: 3em;
+  }
+}
+@media screen and (min-width:1280px){
+  .aboutSecH1{
+    margin-top:1%;
+    font-size: 4em;
+  }
+}
 .brandDiv{
   width: 50%;
  display:flex;
