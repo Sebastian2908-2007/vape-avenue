@@ -200,6 +200,9 @@ width: 100%;
     font-size: 4em;
   }
 }
+.contactSection{
+  width:100%;
+}
 .brandDiv{
   width: 50%;
  display:flex;
@@ -239,4 +242,12 @@ width: 100%;
   flex-direction:row;
   justify-content:center;
 }
+
+.contactForm{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:center;
+}
+
 /*rgb(0, 119, 255) #1976d2 */

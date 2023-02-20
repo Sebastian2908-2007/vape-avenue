@@ -2,8 +2,6 @@ import styles from '@/styles/Home.module.css';
 import dynamic from 'next/dynamic';
 import heroVid from '../public/about-hero.mp4';
 const HeroSection = dynamic(() =>import( '@/components/HeroSection'),{ssr: false});
-import brandImg from '../public/Va-about-900.png';
-import Image from 'next/image';
 const About = () => {
     return(
         <>
