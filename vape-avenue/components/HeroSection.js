@@ -12,6 +12,7 @@ const HeroSection = ({video}) => {
             loop={true}
             volume={0}
             muted={true}
+            playsinline={true}
             width={'100%'}
             height={'100%'}
             />
