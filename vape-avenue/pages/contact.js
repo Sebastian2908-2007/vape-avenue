@@ -1,4 +1,8 @@
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+const HeroSection = dynamic(() =>import( '@/components/HeroSection'),{ssr: false});
+import heroVid from '../public/contact-hero3.mp4';
 import { validateEmail } from '@/utils/helpers';
 import styles from '@/styles/Home.module.css';
 const Contact = () => {
@@ -41,29 +45,58 @@ const Contact = () => {
                console.log(formState);
         };
     return(
+        <>
+         <HeroSection video={heroVid}/>
         <section className={styles.contactSection}>
-            <h1 className={styles.aboutSecH1} data-testid='contact-title'>Contact Us</h1>
+            <h1 className={styles.contactSecH1} data-testid='contact-title'>Contact Us</h1>
             <form className={styles.contactForm} id="contact-form" onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="name">Name:</label>
-                    <input type='text' name="name" defaultValue={name} onBlur={handleChange}/>
+                <div className={styles.formDiv}>
+                    <label className={styles.formLabel} htmlFor="name">Name:</label>
+                    <input className={styles.contactInput} type='text' name="name" defaultValue={name} onBlur={handleChange}/>
                 </div>
-                <div>
-                    <label htmlFor="email">Email:</label>
-                    <input type='email' name="email" defaultValue={email} onBlur={handleChange}/>
+                <div className={styles.formDiv}>
+                    <label className={styles.formLabel} htmlFor="email">Email:</label>
+                    <input className={styles.contactInput} type='email' name="email" defaultValue={email} onBlur={handleChange}/>
                 </div>
-                <div>
-                    <label htmlFor="message">Message:</label>
-                    <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
+                <div className={styles.formDiv}>
+                    <label className={styles.formLabel} htmlFor="message">Message:</label>
+                    <textarea className={styles.contactTextarea} name="message" rows="5" defaultValue={message} onBlur={handleChange} />
                 </div>
                 {errorMessage &&(
                     <div>
-                        <p className='error-text'>{errorMessage}</p>
+                        <p className={styles.errMsgP}>{errorMessage}</p>
                     </div>
                 )}
-                <button data-testid='contact-submit' type="submit">Submit</button>
+                <button className={styles.formBtn} data-testid='contact-submit' type="submit">Submit</button>
             </form>
+            <section className={styles.modBrndSec}>
+              <div className={styles.imgBrandDiv}>
+              <Image
+              src='/geekvape-brand.png'
+              alt='mod brand'
+              height={50}
+              width={100}
+              />  
+              </div>  
+              <div className={styles.imgBrandDiv}>
+              <Image
+              src='/vaporesso-brand.png'
+              alt='mod brand'
+              height={50}
+              width={100}
+              />  
+              </div>  
+              <div className={styles.imgBrandDiv}>
+              <Image
+              src='/voopoo-brand.png'
+              alt='mod brand'
+              height={50}
+              width={100}
+              />  
+              </div>  
+            </section>
         </section>
+        </>
     );
 };
 
