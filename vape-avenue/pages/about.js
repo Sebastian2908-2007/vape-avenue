@@ -10,7 +10,7 @@ const About = () => {
         <section className={styles.aboutSection}>
             <h1 className={styles.aboutSecH1}>Vape Avenue</h1>
             <div className={styles.aboutImgDiv1}>
-       <img className={styles.nextImg} src='/Va-sunglass-700.png' alt='vape avenue branding'/>
+       <img className={styles.nextImg} src='/va-sunglass-700.png' alt='vape avenue branding'/>
        <img className={styles.nextImg} src='/Va-about-900.png' alt='vape avenue branding'/>
        </div>
        <p className={styles.aboutParagraph}>
