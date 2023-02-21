@@ -114,6 +114,7 @@ const Layout = ({children}) => {
              <ChevronRightIcon sx={{color:'#5FAEBF'}}/>
            )}
          </IconButton>
+         <span className={styles.storeHrsSpan}>Store hours Mon-Sun 9am-9pm</span>
        </DrawerHeader>
        <Divider/>
        <List>
@@ -146,31 +147,45 @@ const Layout = ({children}) => {
           alt='vape avenue logo'
          width='100%'
          />
+         <div className={styles.iframeDiv}>
+         <iframe 
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.841210536812!2d-111.8909312838158!3d40.65543054900978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87528989a309126f%3A0x3c3c58f3183b1271!2s5318%20S%20State%20St%2C%20Murray%2C%20UT%2084107!5e0!3m2!1sen!2sus!4v1676948144554!5m2!1sen!2sus" 
+         width="240" 
+         height="240" 
+         allowFullScreen="" 
+         loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+         ></iframe>
+         </div>
+         
          <div className={styles.brandDiv}>
          <img
-         className={styles.regImg}
+         
           src='/frutia-brand.png'
           alt='vape avenue logo'
-         width='100%'
+         width='35%'
          />
          <img
-         className={styles.regImg}
+         
           src='/ruthless-brand.png'
           alt='vape avenue logo'
-         width='100%'
+         width='35%'
          />
+         </div>
+         <div className={styles.brandDiv}>
          <img
-         className={styles.regImg}
+         
           src='/twist-brand.png'
           alt='vape avenue logo'
-         width='100%'
+         width='35%'
          />
          <img
-         className={styles.regImg}
+         
           src='/milk-brand.png'
           alt='vape avenue logo'
-         width='100%'
+         width='35%'
          />
+         
       </div>
      </Drawer>
    </Box>
