@@ -1,38 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# License
+ 
+N/A "dont copy"
+                 
+      
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+# Vape-Avenue
+ https://github.com/Sebastian2908-2007/vape-avenue
+ ## Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This is a project meant to showcase the products of "Vape avenue" in a modern cool and unique way
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+# Deployed App
+https://vape-avenue.vercel.app/ 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+ ## Table Of Contents
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributors](#contributors)
+* [Test](#test)
+* [Contact](#contact)
+* [Questions](#questions)
+    
+ ## Installation
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+@emotion/styled, @mui/icons-material,@mui/material,next-videos,react-icons,react-player,react-swipeable-views,react-swipeable-views-utils
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Usage
+ This website is used by going through all the navigation and enjoying the views
 
-## Learn More
+ ## Contributors
 
-To learn more about Next.js, take a look at the following resources:
+  Sebastian Crespin Bowen
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ ## Test 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+ N/A
+    
+## Contact
 
-## Deploy on Vercel
+ <sebastian@topdev.tech>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Questions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+ Sebastian2908-2007
+
+If you Have any Questions email me @
+
+<sebastian@topdev.tech>
+
+
+## License
+ 
+N/A "dont copy"
+
+# Photo's
+![vape-ave](https://user-images.githubusercontent.com/77297220/221642872-70ae88a4-d049-4089-90b3-779928df98f0.png)
+
+![vape-ave2](https://user-images.githubusercontent.com/77297220/221642892-b62547b1-33e7-46a6-9639-c928b3719369.png)
+
+![Screenshot (3527)](https://user-images.githubusercontent.com/77297220/221643301-db37f563-a7e6-4d14-8533-4ba30e57ea33.png)
+
+
+ 
